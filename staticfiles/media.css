@@ -1,0 +1,90 @@
+@media screen and (max-width:1000px) {
+    .allpogination{
+        width: 100%;
+    }
+    .row-q{
+        flex-direction: column-reverse;
+        gap: 40px;
+        align-items:center;
+    }
+    .respons{
+        display: none;
+    }
+    .card{
+        max-width:800px;
+    }
+    .answers{
+        width: 100%;
+    }
+}
+    @media screen and (max-width:760px) {
+        .img-1,
+        .img-2,
+        .img-3{
+            width: 150px;
+            height: 160px;          
+        }
+    }
+        @media screen and (max-width:540px) {
+     .container{
+         padding: 0 4%;
+     }
+        .exit{
+        display: none;
+    }
+    .allpogination i{
+        display: block;
+    }
+    .bars{
+        display: block;
+    }
+    .pogination .c2{
+        display: none;
+    }
+    .reg{
+        display: none;
+    }
+}
+@media screen and (max-width:500px) {
+.row-answer{
+    flex-direction: column;
+}
+.answer{
+    width: 100%;
+}
+.buttons{
+    justify-content: space-between;
+}
+.login-row{
+    width: 100%;
+}
+.register{
+    padding:50px 20px ;
+
+}
+.user{
+    width: 100%;
+    margin:50px 0 0 0  ;
+    padding: 0;
+}
+}
+    @media screen and (max-width:380px) {
+    .img-1,
+    .img-2 ,  
+    .img-3{
+    flex-grow: 1;
+   }
+   .login-row{
+    height: 30px;
+}
+   #login,#register{
+    font-size: 15px;
+
+}
+.user .input{
+    font-size: 15px;
+}
+.option{
+    font-size: 15px;
+}
+}

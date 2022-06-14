@@ -1,0 +1,54 @@
+{% extends  'wrapper.html'%}
+
+{% block title %}
+    <h1>Register</h1>
+{% endblock %}
+
+{% block content %}
+<style>
+    .log{
+        /* max-width: 600px; */
+        margin:8em auto;
+        width: 50% !important;
+    }
+</style>
+
+<div class="log">
+
+        {% if messages %}
+                {% for m in messages %}
+                    <h1 class="text-{{ m.tags }}">{{ m }}</h1>
+                {% endfor %}
+        {% endif %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+    
+        <div class="logins user">
+        <input class="input" type="text"    required name="first_name" placeholder="Enter name">
+        <input class="input" type="text"    required name="last_name" placeholder="Enter surname">
+        <input class="input" type="email"   required  name="email" placeholder="Enter your email">
+        <input class="input" type="text"    required name="adres" placeholder="Enter  your adres">
+        <input class="input" type="text"    required name="username" placeholder="Enter username">
+        <input class="input" type="password" required name="password" placeholder="Enter  Password ">
+        <input class="input" type="password" required  name="password_confirm" placeholder="Enter  Password again">
+        <label for="msg">About your self</label> 
+        <textarea name="msg" class="form-control" required  cols="30" rows="10"></textarea>
+       
+        <div class="row-pas">
+        <input type="checkbox" ><span>Remember password</span>
+       </div>
+
+       <div class="form-group">
+           <span>Ro'yxatdan o'tganmisiz?</span>
+           <a href="{% url 'profil:login' %}">Kirish</a>
+       </div>
+
+        <button class="login-btn" type="submit" >Register</button>
+        </div>
+
+    </form>
+</div>
+{% endblock content %}
+
+
